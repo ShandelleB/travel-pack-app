@@ -60,7 +60,7 @@ class DestinationsController < ApplicationController
 
   # GET /destinations/new
   def new
-    @suggestion = Suggestion.find(params[:id])
+    @suggestion = params[:suggestion]
     @destination = Destination.new
   end
 
