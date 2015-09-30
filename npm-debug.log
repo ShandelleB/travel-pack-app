@@ -1,0 +1,142 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/v0.10.35/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/v0.10.35/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'launchctl' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose cache add [ 'launchctl', null ]
+5 verbose cache add name=undefined spec="launchctl" args=["launchctl",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'launchctl',
+6 verbose parsed url   path: 'launchctl',
+6 verbose parsed url   href: 'launchctl' }
+7 silly lockFile d257766a-launchctl launchctl
+8 verbose lock launchctl /home/ubuntu/.npm/d257766a-launchctl.lock
+9 silly lockFile d257766a-launchctl launchctl
+10 silly lockFile d257766a-launchctl launchctl
+11 verbose addNamed [ 'launchctl', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 4c576992-launchctl launchctl@
+14 verbose lock launchctl@ /home/ubuntu/.npm/4c576992-launchctl.lock
+15 silly addNameRange { name: 'launchctl', range: '*', hasData: false }
+16 verbose request where is /launchctl
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 323dc966a66be71e
+19 verbose url raw /launchctl
+20 verbose url resolving [ 'https://registry.npmjs.org/', './launchctl' ]
+21 verbose url resolved https://registry.npmjs.org/launchctl
+22 verbose request where is https://registry.npmjs.org/launchctl
+23 info trying registry request attempt 1 at 14:51:34
+24 verbose etag "D3ZY0TFMZYHBI8R35YBPVEUOI"
+25 http GET https://registry.npmjs.org/launchctl
+26 http 304 https://registry.npmjs.org/launchctl
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Tue, 29 Sep 2015 14:51:34 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"D3ZY0TFMZYHBI8R35YBPVEUOI"',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-dfw1826-DFW',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1443538294.569956,VS0,VE46',
+27 silly registry.get     vary: 'Accept' } ]
+28 verbose etag https://registry.npmjs.org/launchctl from cache
+29 silly addNameRange number 2 { name: 'launchctl', range: '*', hasData: true }
+30 silly addNameRange versions [ 'launchctl',
+30 silly addNameRange   [ '0.0.1',
+30 silly addNameRange     '0.0.2',
+30 silly addNameRange     '0.0.3',
+30 silly addNameRange     '0.0.4',
+30 silly addNameRange     '0.1.0',
+30 silly addNameRange     '0.1.2',
+30 silly addNameRange     '0.1.3',
+30 silly addNameRange     '0.1.4',
+30 silly addNameRange     '0.1.5',
+30 silly addNameRange     '0.1.6',
+30 silly addNameRange     '0.1.7',
+30 silly addNameRange     '0.1.8',
+30 silly addNameRange     '0.1.9',
+30 silly addNameRange     '0.2.0',
+30 silly addNameRange     '0.2.1',
+30 silly addNameRange     '0.2.2',
+30 silly addNameRange     '0.2.3',
+30 silly addNameRange     '0.2.4',
+30 silly addNameRange     '0.2.5',
+30 silly addNameRange     '0.2.9',
+30 silly addNameRange     '1.0.0',
+30 silly addNameRange     '1.0.1',
+30 silly addNameRange     '1.0.2',
+30 silly addNameRange     '1.0.3',
+30 silly addNameRange     '1.1.0',
+30 silly addNameRange     '1.1.1' ] ]
+31 verbose addNamed [ 'launchctl', '1.1.1' ]
+32 verbose addNamed [ '1.1.1', '1.1.1' ]
+33 silly lockFile d13281eb-launchctl-1-1-1 launchctl@1.1.1
+34 verbose lock launchctl@1.1.1 /home/ubuntu/.npm/d13281eb-launchctl-1-1-1.lock
+35 silly lockFile d13281eb-launchctl-1-1-1 launchctl@1.1.1
+36 silly lockFile d13281eb-launchctl-1-1-1 launchctl@1.1.1
+37 silly lockFile 4c576992-launchctl launchctl@
+38 silly lockFile 4c576992-launchctl launchctl@
+39 silly resolved [ { name: 'launchctl',
+39 silly resolved     version: '1.1.1',
+39 silly resolved     description: 'Native bindings to launchctl commands',
+39 silly resolved     main: './lib/index.js',
+39 silly resolved     scripts:
+39 silly resolved      { test: 'tap test/*.js',
+39 silly resolved        travis: './test/travis.sh',
+39 silly resolved        'test-versions': './scripts/test_versions.sh',
+39 silly resolved        install: 'node-gyp rebuild' },
+39 silly resolved     repository:
+39 silly resolved      { type: 'git',
+39 silly resolved        url: 'https://github.com/evanlucas/node-launchctl' },
+39 silly resolved     keywords: [ 'mac', 'launchctl', 'launchd' ],
+39 silly resolved     os: [ 'darwin' ],
+39 silly resolved     author: { name: 'Evan Lucas' },
+39 silly resolved     licenses: [ [Object] ],
+39 silly resolved     gypfile: true,
+39 silly resolved     devDependencies: { tap: '~0.4.8' },
+39 silly resolved     dependencies:
+39 silly resolved      { bindings: '~1.1.0',
+39 silly resolved        'launchd.plist': '~0.0.1',
+39 silly resolved        nan: '^1.0.0',
+39 silly resolved        syserrno: '0.0.8' },
+39 silly resolved     bugs: { url: 'https://github.com/evanlucas/node-launchctl/issues' },
+39 silly resolved     homepage: 'https://github.com/evanlucas/node-launchctl',
+39 silly resolved     _id: 'launchctl@1.1.1',
+39 silly resolved     _shasum: '4770c08ddb5fec8ebfaf6eb3e7e05c5a52736dcb',
+39 silly resolved     _from: 'launchctl@',
+39 silly resolved     _npmVersion: '1.4.7',
+39 silly resolved     _npmUser: { name: 'evanlucas', email: 'evanlucas@me.com' },
+39 silly resolved     maintainers: [ [Object] ],
+39 silly resolved     dist:
+39 silly resolved      { shasum: '4770c08ddb5fec8ebfaf6eb3e7e05c5a52736dcb',
+39 silly resolved        tarball: 'http://registry.npmjs.org/launchctl/-/launchctl-1.1.1.tgz' },
+39 silly resolved     directories: {},
+39 silly resolved     _resolved: 'https://registry.npmjs.org/launchctl/-/launchctl-1.1.1.tgz',
+39 silly resolved     readme: 'ERROR: No README data found!' } ]
+40 info install launchctl@1.1.1 into /home/ubuntu/workspace
+41 info installOne launchctl@1.1.1
+42 error notsup Unsupported
+42 error notsup Not compatible with your operating system or architecture: launchctl@1.1.1
+42 error notsup Valid OS:    darwin
+42 error notsup Valid Arch:  any
+42 error notsup Actual OS:   linux
+42 error notsup Actual Arch: x64
+43 error System Linux 3.14.13-c9
+44 error command "/home/ubuntu/.nvm/v0.10.35/bin/node" "/home/ubuntu/.nvm/v0.10.35/bin/npm" "install" "launchctl"
+45 error cwd /home/ubuntu/workspace
+46 error node -v v0.10.35
+47 error npm -v 1.4.28
+48 error code EBADPLATFORM
+49 verbose exit [ 1, true ]

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @suggestion.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @suggestion.state %>
+</p>
+
+<p>
+  <strong>Packing list:</strong>
+  <%= @suggestion.packing_list %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @suggestion.category %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @suggestion.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @suggestion.updated_at %>
+</p>
+
+<p>
+  <strong>Avatar file name:</strong>
+  <%= @suggestion.avatar_file_name %>
+</p>
+
+<p>
+  <strong>Avatar content type:</strong>
+  <%= @suggestion.avatar_content_type %>
+</p>
+
+<p>
+  <strong>Avatar file size:</strong>
+  <%= @suggestion.avatar_file_size %>
+</p>
+
+<p>
+  <strong>Avatar updated at:</strong>
+  <%= @suggestion.avatar_updated_at %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @suggestion.slug %>
+</p>
+
+<%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |
+<%= link_to 'Back', suggestions_path %>

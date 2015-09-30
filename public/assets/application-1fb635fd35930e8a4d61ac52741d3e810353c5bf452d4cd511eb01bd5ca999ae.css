@@ -1,0 +1,84 @@
+
+ /** This is a manifest file that'll be compiled into application.css, which will include all the files*/
+ /** listed below.*/
+ /***/
+ /** Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,*/
+ /** or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.*/
+ /***/
+ /** You're free to add application-wide styles to this file and they'll appear at the bottom of the*/
+ /** compiled file so the styles you add here take precedence over styles defined in any styles*/
+ /** defined in the other CSS/SCSS files in this directory. It is generally better to create a new*/
+ /** file per style scope.*/
+ /***/
+
+
+
+ 
+
+h1 {
+    text-align: center;
+    font-weight: bolder !important;
+    padding-top: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.panel-heading {
+    text-align: center;
+}
+
+.panel-footer {
+    text-align: center;
+}
+
+.navbar-static-top {
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+body {
+    height: 100%;
+    padding-bottom: 70px;
+}
+
+header {
+	height: 90%;
+	position: relative;
+	background-color: red;
+}
+
+/* hero_area div containing video needs to be the size of parent div height, thus top, left, right, bottom helps to stretch hero_area div to the size of parent by giving position absolute.
+ * overflow hides the video over-flowing outside the current size of hero_area. this can be helpful to control the visible part of video by pulling it using position value in video (top / bottom/ left/ right).
+*/
+
+.hero_area {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	overflow: hidden;
+}
+
+audio, canvas, video {
+	display: inline-block;
+}
+
+/* here bottom value can be set to 0 to always match the buttom part of the video with the buttom part of the containing div, in our case hero_area. I have used negative -150px to pull the video downward so that i can chop some unwanted area which overflow of parent(hero_area) will hide.
+* as width is set to 100%, and height to auto, as the width of the browser changes height is auto calculated making the video responsive
+*/
+
+.hero_area video {
+	bottom: -150px;
+	position: absolute;
+	width: 100%;
+	height: auto;
+}

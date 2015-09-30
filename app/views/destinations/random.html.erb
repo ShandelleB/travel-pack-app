@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<br>
+<h1>Random Destination</h1>
+  
+<div class= 'row' id='randomDest'>
+    <div class='col-md-6'>
+      <div class='panel panel-default'>
+        <div class='panel-heading'>
+          <h1><%= @destination.city %></h1>
+        </div>
+        <div class='panel-body'>
+          <%= image_tag @destination.avatar.url, class: "img-responsive", class: "center-block", width: 300, height: 200 %>
+          <h3><%= @destination.state %></h3><br />
+           <ul>
+              <% @destination.packing_list_a.each do |l|%>
+              <li><%= l %></li>
+              <%end%>
+            </ul>
+          <br>
+          <h4><%= @destination.category %></h4>
+        </div>
+        <div class='panel-footer'>
+          <%= link_to 'Show', @destination, class:'btn btn-primary' %>
+          <% if can? :update, @destination %>
+          <%= link_to 'Edit', edit_destination_path(@destination), class:'btn btn-warning' %>
+          <%= link_to 'Destroy', @destination, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+

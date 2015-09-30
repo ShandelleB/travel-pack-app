@@ -1,0 +1,35 @@
+<p style="color: green;"><%= notice %></p>
+
+<h1></h1>
+
+<div class= 'row'>
+  <% if @suggestions.empty? %>
+        <h3> There are no suggestions at this time. </h3>
+  <% else %>      
+  <% @suggestions.each do |suggestion| %>
+    <div class='col-md-4'>
+      <div class='panel panel-default'>
+        <div class='panel-heading'>
+          <h2><%= link_to suggestion.city, suggestion %></h2>
+        </div>
+        <div class='panel-body'>
+          <h3><%= suggestion.state %></h3><br />
+            <ul>
+              <% suggestion.packing_list.split(",").each do |l|%>
+              <li><%= l %></li>
+              <%end%>
+            </ul>
+          <br>
+        </div>
+        <div class='panel-footer'>
+          <%= link_to 'Destroy Suggestion',  { action: :destroy, id: suggestion.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <br>
+          <%= link_to 'Create Destination', new_destination_path(suggestion) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <% end %>
+</div>
+
+<br>

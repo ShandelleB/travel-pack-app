@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Selected Destination</h1> 
+
+<div class= 'row'>
+    <div class='col-md-6 col-md-offset-3'>
+      <div class='panel panel-default'>
+        <div class='panel-heading'>
+          <h1><%= @destination.city %></h1>
+        </div>
+        <div class='panel-body'>
+          <%= image_tag @destination.avatar.url, class: "img-responsive", class: "center-block", width: 300, height: 200 %>
+          <h3><%= @destination.state %></h3><br />
+           <ul>
+              <% @destination.packing_list_a.each do |l|%>
+              <li><%= l %></li>
+              <%end%>
+            </ul>
+          <br>
+          <h4><%= @destination.category %></h4>
+        </div>
+        <div class='panel-footer'>
+            <% if can? :update, @destination %>
+                <%= link_to 'Edit', edit_destination_path(@destination), class:'btn btn-warning' %>
+                <%= link_to 'Destroy', @destination, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+            <% end %>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class = "row">
+    <div class = "col-md-6 col-md-offset-3">
+        <div class = "well">
+            <h1>Welcome To <%= @destination.city %>!</h1>
+            <div class = "row">
+                <div class = "col-md-7">
+                    <p><em>What's the weather like?</em></p>
+                    <p>
+                        Temperature is: <%= @weather_lookup.temperature  %>° F 
+                    </p>
+                    <p>
+                        Feels like: <%= @weather_lookup.feelslike_f %>° F
+                    </p>
+                </div>    
+                <div class = "col-md-5">
+                    <p>
+                       <%= @weather_lookup.condition %> <%= image_tag @weather_lookup.icon %> 
+                    </p>
+                    <p>
+                        <%= link_to "Full Forecast", @weather_lookup.forecast_url, target: "_blank" %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
