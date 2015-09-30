@@ -24,7 +24,7 @@
         <div class='panel-footer'>
           <%= link_to 'Destroy Suggestion',  { action: :destroy, id: suggestion.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
           <br>
-          <%= link_to 'Create Destination', new_destination_path %>
+          <%= link_to 'Create Destination', new_destination_path(id: suggestion.id) %>
         </div>
       </div>
     </div>

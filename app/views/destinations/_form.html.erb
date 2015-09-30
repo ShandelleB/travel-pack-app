@@ -10,27 +10,43 @@
       </ul>
     </div>
   <% end %>
-  <p><%= @suggestion %></p>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label "Photo" %><br>
-    <%= f.file_field :avatar %>
-  </div>
-  <div class="field">
-    <%= f.label :packing_list %><br>
-    <%= f.text_area :packing_list %>
-  </div>
-  <div class="field">
-    <%= f.select :category, ['Beach','Urban','Ski','Hike','Golf'], 
-      {:include_blank => 'Pick a category'}, class: "form-control" %>
-  </div>
+  <% if @suggestion %>
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.text_field :city, value: @suggestion.city %>
+      </div>
+      <div class="field">
+        <%= f.label :state %><br>
+        <%= f.text_field :state, value: @suggestion.state %>
+      </div>
+      <div class="field">
+        <%= f.label :packing_list %><br>
+        <%= f.text_area :packing_list, value: @suggestion.packing_list %>
+      </div>
+  <% else %>
+      <div class="field">
+        <%= f.label :city %><br>
+        <%= f.text_field :city %>
+      </div>
+      <div class="field">
+        <%= f.label :state %><br>
+        <%= f.text_field :state %>
+      </div>
+      <div class="field">
+        <%= f.label :packing_list %><br>
+        <%= f.text_area :packing_list %>
+      </div>
+  <% end %> 
+      <div class="field">
+        <%= f.label "Photo" %><br>
+        <%= f.file_field :avatar %>
+      </div>
+      
+      <div class="field">
+        <%= f.select :category, ['Beach','Urban','Ski','Hike','Golf'], 
+          {:include_blank => 'Pick a category'}, class: "form-control" %>
+      </div>
+   
   <div class="actions">
     <%= f.submit %>
   </div>
