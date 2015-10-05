@@ -46,8 +46,13 @@
         <%= f.select :category, ['Beach','Urban','Ski','Hike','Golf'], 
           {:include_blank => 'Pick a category'}, class: "form-control" %>
       </div>
-   
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+   <% if @suggestion %>
+      <div class="actions">
+        <%= f.button :submit, name: "suggestion_id", value: @suggestion.id %>
+      </div>
+   <% else %>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+   <% end %>    
 <% end %>

@@ -74,7 +74,9 @@ class DestinationsController < ApplicationController
   # POST /destinations.json
   def create
     @destination = Destination.new(destination_params)
-
+    if params[:suggestion_id]
+      Suggestion.destroy(params[:suggestion_id])
+    end
     respond_to do |format|
       if @destination.save
         Destination.reindex
@@ -119,6 +121,6 @@ class DestinationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def destination_params
-      params.require(:destination).permit(:city, :state, :packing_list, :category, :avatar)
+      params.require(:destination).permit(:city, :state, :packing_list, :category, :avatar, :suggestion_id)
     end
 end
